@@ -1,0 +1,39 @@
+.page-footer {
+  flex: 0 0 auto; 
+  margin-top: 50px;
+  color: rgba(126, 126, 130, 1);
+  @media (min-width: $screen-md) { 
+      margin-top: 80px;
+  }
+ 
+
+  &__container {
+    @media (min-width: $screen-md) { 
+      display: flex;
+      align-content: space-between;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) { 
+      flex-basis: 34%;
+    }
+
+    &:first-of-type {
+      @media (min-width: $screen-md) { 
+      text-align: left;
+      }
+    }
+
+    &:last-of-type {
+      @media (min-width: $screen-md) {
+        text-align: right;
+        flex-basis: 32%;
+      }
+    }
+
+  }
+}

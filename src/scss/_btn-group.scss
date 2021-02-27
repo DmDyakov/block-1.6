@@ -1,0 +1,60 @@
+.btn-group {
+  display: flex; 
+  align-items: center; 
+  
+  &--hidden-xs {
+    display: none;
+
+    @media (min-width: $screen-md) { 
+     display: flex;
+    }
+  }  
+
+  &--hidden-xs-sm-md {
+    display: none;
+
+    @media (min-width: $screen-lg) { 
+     display: flex;
+    } 
+  }
+
+  
+  &__divider {
+    min-width:2px;
+    height: 32px;
+    background: #EAEAEA;
+    margin: 0 16px 0;
+
+    &--hidden-xs {
+      display: none;
+  
+      @media (min-width: $screen-md) { 
+       display: block;
+      }  
+    }    
+  }
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {  
+      transition: opacity 0.3s; 
+      flex: 1;
+    
+      &:hover {
+        color: #1e1e1e;
+        opacity: 0.7;
+        transition: opacity 0.3s;    
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

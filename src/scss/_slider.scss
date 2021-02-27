@@ -1,0 +1,254 @@
+.slider { 
+  width: 100%;   
+  max-width: 1120px;
+  margin: 0 auto;
+  background-color: #F8F8F8;
+  padding: 0 0 14px 16px;
+
+  @media (min-width: 768px) {        
+    padding: 0 0 14px 24px;
+  } 
+
+  @media (min-width: 1120px) {        
+    padding: 0 0 14px 32px;
+  } 
+
+  &__header {
+    border-top: 1px solid rgba(217, 255, 245, 1);      
+    line-height: 22px;    
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font: 16px 'TT Lakes Medium';
+    text-transform: uppercase;
+    color: rgba(126, 126, 130, 1);
+    padding: 16px 0 16px 0;
+  
+  }
+
+  &__container {
+    background: #F8F8F8;   
+  //  overflow: hidden;
+    
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: nowrap;  
+    min-width: 0;      
+    margin-bottom: 16px;
+    // max-height: 160px;
+
+    @media (min-width: 768px) {        
+      flex-flow: wrap; 
+      max-height: 156px;
+    } 
+
+    &--largest {
+
+      @media (min-width: 768px) {    
+        max-height: 100%;  
+        margin-bottom: 0;
+      }
+    }
+
+    
+ 
+  }
+
+  &__item {
+    display: flex; 
+    justify-content: space-between;
+    width: 240px;
+    height: 72px;
+    min-width:0;  
+    // align-items: center;       
+    background-color: #FFFFFF;  
+    padding: 16px; 
+    margin-right: 16px; 
+
+    @media (min-width: 768px) {        
+      width: 224px;           
+      margin-right: 24px;   
+      margin-bottom: 16px; 
+    } 
+
+    @media (min-width: 1120px) {        
+      width: 240px;        
+      margin-right: 32px; 
+    } 
+
+    .btn--go {
+      align-self: flex-end;
+    }
+
+    &--large {
+      height: 160px;
+    }
+
+    &--largest {
+      position: relative; 
+      width:260px; 
+      height: 200px; 
+      display: flex;
+      flex-flow: wrap;
+  
+      @media (min-width: 768px) {      
+        flex-flow: nowrap;            
+        flex: 100%;
+        height: 56px;
+        margin-bottom: 0;
+      }
+
+      &:not(:last-of-type)::after {
+      content: "";
+        position: absolute;
+        height: 1px;
+        width: calc(100% - 36px);      
+        bottom: 0;
+        background-color: #EAEAEA;
+      }   
+    
+    }
+
+    &--hidden-sm {
+      display: none;
+      @media (min-width: 768px) {
+        width: auto; 
+        display: flex; 
+        margin-bottom: 0;
+        background-color: inherit;      
+      } 
+    }
+
+  //   .slider__subitem-title {
+  //     display: block;
+  //     margin-bottom: 0;
+  //   }
+
+  //   & .price-list__btn {
+  //     visibility: hidden;      
+  //   }
+    
+  }
+
+  &__subitem {
+    margin-right: 16px;
+    align-self: center;
+
+    @media (min-width: 768px) { 
+      white-space: nowrap;
+      min-width: 80px;
+      
+    } 
+
+    &:not(:last-of-type) {
+      flex: 100%;
+      @media (min-width: 768px) { 
+        flex: auto;
+        
+
+      }
+    }  
+
+    &:first-of-type {
+
+      @media (min-width: 768px) { 
+        flex: auto;
+        min-width: 55%;                      
+      }
+    }  
+  }  
+
+  &__subitem-title {
+    font: 14px 'TT Lakes Medium';
+    color: rgb(189, 189, 189);
+    margin-bottom: 4px;
+
+    &--hidden-sm {
+      @media (min-width: 768px) { 
+      display: none;
+      }
+    }
+  }
+
+  &__brands-logo {
+    margin-right: 16px;
+    object-fit: none;
+  }
+
+  &__pagination {
+    position: static;    
+
+    @media (min-width: 768px) {
+           
+        display: none;
+    
+      
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: #DDDDDD;
+      opacity: 1;    
+    }
+    
+    .swiper-pagination-bullet-active {
+      background: #B5B6BC;  
+    }
+  }
+
+  &__change-size-btn {
+    display: none;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+  } 
+
+  .btn--order {
+    flex: 1 119px;
+    min-width: 119px;
+    align-self: flex-end;
+    
+    max-width: 119px;
+    width: 100px;
+    height: 32px;
+    // margin-left: 20px;
+    // background: url(../img/icon-order.svg) no-repeat;
+
+    @media (min-width: 768px) { 
+      align-self: center;
+    }
+  }  
+
+  &__note {
+    max-width: 421px;
+    margin: 16px 0;
+  }
+
+  .btn--hidden-always {
+    visibility: hidden;
+  }
+}  
+
+
+
+
+
+// .hidden {
+//   display: none;
+// }
+
+
+.show {
+  max-height: 100%;         
+}
+
+
+

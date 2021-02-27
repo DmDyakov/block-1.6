@@ -1,0 +1,148 @@
+.btn {
+  position: relative;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  // border-radius: 50%;
+  text-decoration: none;
+  font: $font-size--large $font-family--medium;
+  line-height: $font-size--large;
+  color: black;
+  background-color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity, color 0.3s;
+  
+  &:hover, 
+  &:active   {
+    opacity: 0.7;
+    transition: opacity 0.3s;  
+    outline: none;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 16px;   
+  }
+
+  &__text {    
+    padding-right: 50px;
+
+
+  }
+
+  &--show-more {      
+    margin-left: 25px;    
+    height: $font-size--large;
+    
+    &:before {
+      content: "";
+      position:absolute;
+      left: -25px;          
+      width: 8px;
+      height: $font-size--large;       
+      background: url(../img/icon-change-size-btn.svg) no-repeat center / 100% 100%; ;
+    }
+
+    &--hidden-xs-sm {
+      display: none;
+
+      @media (min-width: $screen-md) {        
+        display: block;
+      } 
+    }
+
+  }
+
+  &--get-price {
+    height: $font-size--large;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: $font-size--large;
+      margin-left: 10px;
+      background: url(../img/icon-get-price-after.svg) no-repeat center / 100% 100%;   
+  
+    } 
+  }
+
+  &--burger {
+    background: url(../img/icon-burger.svg) no-repeat;
+    margin-right: 16px;
+
+    @media (min-width: 768px) { 
+      margin-right: 0;
+    }
+  }
+
+  &--hidden-lg {
+    @media (min-width: $screen-lg) { 
+      display: none;
+    }
+  }
+  
+  &--call {    
+    background: url(../img/icon-call.svg) no-repeat;
+  }
+  
+  &--profile {    
+    background: url(../img/icon-profile.svg) no-repeat;
+  }
+  
+  &--chat {    
+    background: url(../img/icon-chat.svg) no-repeat;
+  }
+  
+  &--repair {    
+    background: url(../img/icon-repair.svg) no-repeat right;
+  }
+  
+  &--checkstatus {    
+    background: url(../img/icon-checkstatus.svg) no-repeat right;
+  } 
+  
+  &--call {    
+    background: url(../img/icon-call.svg) no-repeat;
+  }
+  
+  &--profile {    
+    background: url(../img/icon-profile.svg) no-repeat;
+  }
+  
+  &--chat {    
+    background: url(../img/icon-chat.svg) no-repeat;
+  }
+  
+       
+  &--close {    
+    background: url(../img/icon-close.svg) no-repeat right;
+  }
+  
+  &--search {    
+    background: url(../img/icon-search.svg) no-repeat right;
+  } 
+
+  &--go {
+    background: url(../img/icon_go.svg) no-repeat right;
+  }
+
+  &--order {
+    background: url(../img/icon-order.svg) no-repeat right;
+  }
+
+  &--send-form {
+    background: url(../img/icon-send-form.svg) no-repeat right;
+    width: 136px;
+    height: 32px;   
+    
+  }
+
+  
+ 
+}
+
+
+
+
+        

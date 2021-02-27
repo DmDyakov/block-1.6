@@ -1,0 +1,23 @@
+.modal {
+  display: none;
+  position: absolute;
+  height: auto;
+  min-height: 100%;
+  z-index: 1;    
+  min-width: 320px;
+  width: 100%;
+  max-width: 100%;                       
+  background: #FFFFFF;
+
+  @media (min-width: $screen-md) {      
+    max-width: 320px;
+
+  }
+
+  @media (min-width: $screen-lg) {      
+    // width: auto;
+    min-width: 306px;
+    max-width: 306px;
+  }
+  
+}
