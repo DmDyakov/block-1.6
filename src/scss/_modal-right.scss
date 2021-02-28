@@ -1,48 +1,48 @@
-.modal-right {
-  right: 0;                                 
-  box-shadow:  -16px 0 20px -2px  rgba(14, 24, 80, 0.2); 
+// .modal-right {
+//   right: 0;                                 
+//   box-shadow:  -16px 0 20px -2px  rgba(14, 24, 80, 0.2); 
 
-  &__header--hidden-lg {
+//   &__header--hidden-lg {
 
-    @media (min-width: $screen-lg) {        
-         display: none;
-    }  
+//     @media (min-width: $screen-lg) {        
+//          display: none;
+//     }  
       
-  }  
+//   }  
 
-  .btn--close {
-      position: absolute;
-      top: 24px;
-      left: 16px;
+//   .btn--close {
+//       position: absolute;
+//       top: 24px;
+//       left: 16px;
 
-    @media (min-width: $screen-lg) {        
-      top: 32px;
-      left: -60px;
-    }  
-  }
+//     @media (min-width: $screen-lg) {        
+//       top: 32px;
+//       left: -60px;
+//     }  
+//   }
 
-  .btn--send-form {
-    float: right;
-  }
+//   .btn--send-form {
+//     float: right;
+//   }
 
-  &__input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid black;
-    border-radius: 8px;
-    margin-bottom: 16px;
+//   &__input {
+//     width: 100%;
+//     padding: 12px;
+//     border: 1px solid black;
+//     border-radius: 8px;
+//     margin-bottom: 16px;
 
-    &::-webkit-input-placeholder { color:#f00; font-family: Georgia;}
-    &::-moz-placeholder { color:#f00; font-family: Georgia;}
-    &:-ms-input-placeholder { color:#f00; font-family: Georgia;}
-    &:-moz-placeholder { color:#f00; font-family: Georgia;}
+//     &::-webkit-input-placeholder { color:#f00; font-family: Georgia;}
+//     &::-moz-placeholder { color:#f00; font-family: Georgia;}
+//     &:-ms-input-placeholder { color:#f00; font-family: Georgia;}
+//     &:-moz-placeholder { color:#f00; font-family: Georgia;}
     
-  }
+//   }
 
-  &__note {
-    margin-bottom: 18px;
-  }
+//   &__note {
+//     margin-bottom: 18px;
+//   }
 
   
 
-}
+// }

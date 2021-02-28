@@ -39,11 +39,11 @@
     flex-flow: nowrap;  
     min-width: 0;      
     margin-bottom: 16px;
-    // max-height: 160px;
+    
 
     @media (min-width: 768px) {        
       flex-flow: wrap; 
-      max-height: 156px;
+      max-height: 160px;
     } 
 
     &--largest {
@@ -201,15 +201,7 @@
     }
   }
 
-  &__change-size-btn {
-    display: none;
-    margin-bottom: 16px;
-
-    @media (min-width: 768px) {
-      display: block;
-    }
-
-  } 
+ 
 
   .btn--order {
     flex: 1 119px;

@@ -10,21 +10,52 @@ SwiperCore.use([Navigation, Pagination]);
 
 
 let swiperOn;
+let mySwiper;
+
+let changeSwiper = () => {        
+  if (document.documentElement.clientWidth < 768 && swiperOn != 1) {
+    mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',                    
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },              
+  });        
+  swiperOn = 1;
+  console.log(swiperOn);
+      
+     
+  } else if (document.documentElement.clientWidth >= 768 && swiperOn == 1) {
+    swiperOn = 0    
+    document.location.reload() // приходится перезагрузить страницу
+    // mySwiper.destroy(); почему не работает, не понятно:(((
+      
+    }  
+          
+  
+}
  
-const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            // spaceBetween: 16,               
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },              
-        });     
+changeSwiper();
+
+window.addEventListener('resize', () => {
+  // console.log("обработчик срабатывает на изменение экрана")
+  changeSwiper();
+
+});
+// let swiper = new Swiper('.swiper-container', {
+//             slidesPerView: 'auto',
+//             // spaceBetween: 16,               
+//             pagination: {
+//                 el: '.swiper-pagination',
+//                 clickable: true,
+//             },              
+//         });     
    
 // require('./slider');
 
 
 console.log('Works!');
-
+const page = document.querySelector('.page');
 const readMoreBtn = document.querySelector('.article__read-more-btn');
 const changeSizeBtns = document.querySelectorAll('.change-size-btn');
 const sliderWrappers = document.querySelectorAll('.slider__wrapper');
@@ -109,6 +140,7 @@ burgerBtn.addEventListener('click', () => {
   showModal(modalMenu);
   hideModal(modalFeedback);
   hideModal(modalCall);
+  getblurPage();
 });
 
 for (let callBtn of callBtns) {
@@ -116,6 +148,7 @@ for (let callBtn of callBtns) {
     showModal(modalCall);
     hideModal(modalFeedback);
     hideModal(modalMenu);
+    getblurPage();
   });
 }
 
@@ -124,22 +157,34 @@ for (let chatBtn of chatBtns) {
     showModal(modalFeedback);
     hideModal(modalCall);
     hideModal(modalMenu);
+    getblurPage();
   });
 }
 
 for (let i = 0; i < modals.length; i++) {
   closeBtns[i].addEventListener('click', () => {
     hideModal(modals[i]);
+    removeblurPage();
   });
 }
 
 
 
 let showModal = (modal) => {
-  modal.classList.add('show-modal');
+  modal.classList.add('modal--show-modal');  
 }
 
 let hideModal = (modal) => {
-  modal.classList.remove('show-modal');
+  modal.classList.remove('modal--show-modal');  
 }
+
+let getblurPage = () => {
+  page.classList.add('page--blur');  
+}
+
+let removeblurPage = () => {
+  page.classList.remove('page--blur');  
+}
+
+
 

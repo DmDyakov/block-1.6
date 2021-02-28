@@ -1,12 +1,12 @@
 .modal {
-  display: none;
+  display: none;  
+  flex-flow: column;
   position: absolute;
-  height: auto;
   min-height: 100%;
-  z-index: 1;    
+  height: auto;
+  z-index: 2;    
   min-width: 320px;
-  width: 100%;
-  max-width: 100%;                       
+  max-width: 360px;                       
   background: #FFFFFF;
 
   @media (min-width: $screen-md) {      
@@ -14,10 +14,211 @@
 
   }
 
-  @media (min-width: $screen-lg) {      
-    // width: auto;
+  @media (min-width: $screen-lg) {    
     min-width: 306px;
     max-width: 306px;
   }
+
+  &__header {    
+
+    &--hidden-lg {
+  
+      @media (min-width: $screen-lg) {        
+           display: none;
+      }          
+    }    
+  }
+
+  &__body {      
+      max-height: 600px;
+
+      @media (min-width: $screen-md) {        
+        flex: 1;
+      }  
+
+      & .nav-vertical {        
+      display: flex;
+      flex-flow: column;
+      // align-content: space-between;
+      justify-content: flex-end;  
+      // margin-top: 34px;
+            
+      }
+      
+                
+    & .nav-vertical__item {
+      display: block;
+      width: 100%;
+      
+      // height: 32px;
+      text-decoration: none;
+      line-height: 24px;
+      font: 16px 'TT Lakes Medium';
+      color: #1B1C21;           
+      letter-spacing: -0.2px;
+      padding: 5px 0;
+      margin-bottom: 14px;
+      transition: color 0.3s;
+      
+      @media (min-width: $screen-md) {        
+        margin-bottom: 22px;
+      }  
+      
+      @media (min-width: $screen-lg) {        
+        margin-bottom: 18px;
+      }  
+
+      &--active {
+        position: relative;  
+        color: $text-color--light;
+        
+        &:before {
+          content: "";
+          position: absolute;
+          left:-$indent;
+          top: 0;
+          width: 4px;
+          height: 32px;
+          background: url(../img/highlight-4x32.svg);   
+
+          @media (min-width: $screen-md) {        
+            left:-$indent--medium;
+          }  
+          
+          @media (min-width: $screen-lg) {        
+            left:-$indent--large;
+          }  
+          
+        }
+      }
+
+      &:focus,
+      &:hover {                  
+        color: #7E7E82;
+        transition: color 0.3s;
+      } 
+    }   
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    line-height: 24px;
+    color: #1B1C21;
+    transition: color 0.3s;
+
+    &:hover, 
+    &:focus {
+      color: #7E7E82;            
+      transition: color 0.3s;
+    }
+  }  
+
+  &__footer {
+    display: flex;
+    flex-flow: column;
+
+    & .btn-group {
+      margin-bottom: 16px;
+    }  
+
+    & .mail-link {
+      font-size: 16px;
+      font-family: 'TT Lakes Medium';
+      margin-bottom: 12px; 
+     }
+
+    & .tel-link {
+       font-size: 24px;
+       font-family: 'TT Lakes Bold';
+       margin-bottom: 8px;
+
+       @media (min-width: $screen-md) {
+          margin-bottom: 40px;
+       }
+    }  
+
+    & .choose-language {
+       display: flex;
+       margin-bottom: 30px;
+    }
+
+    & .choose-language__item {
+       margin-right: 7px;
+    }
+
+    & .choose-language__item--active {
+      color: $gray;
+    }
+  }
+
+
+  &--left {  
+    left: 0;                                 
+    box-shadow:  16px 0 20px -2px  rgba(14, 24, 80, 0.2);
+    
+   
+    @media (min-width: $screen-lg) {        
+      display: flex; 
+      max-width: 320px;   
+      position: static; 
+      z-index: inherit;
+      height: auto;  
+      box-shadow: none;  
+    }      
+  }
+
+  &--right {
+    right: 0;                                 
+    box-shadow:  -16px 0 20px -2px  rgba(14, 24, 80, 0.2); 
+    max-width: 440px;
+    
+    
+    
+    .btn--close {
+        position: absolute;
+        top: 24px;
+        left: 16px;
+  
+      @media (min-width: $screen-lg) {        
+        top: 32px;
+        left: -60px;
+      }  
+    }
+  
+    .btn--send-form {
+      float: right;
+    }
+  
+    &__input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid black;
+      border-radius: 8px;
+      margin-bottom: 16px;
+  
+      &::-webkit-input-placeholder { color: $gray-light; font: $font-size--large $font-family--medium;}
+      &::-moz-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+      &:-ms-input-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+      &:-moz-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+    }
+  
+    &__note {
+      font-family: $font-family--medium;
+      color: $text-color--light;
+      margin-bottom: 18px;
+
+      & .highlighting {
+        color: $pink;
+      }
+    }
+      
+  }
+  
+  &--show-modal {
+    display: flex;
+    
+  }
   
 }
+

@@ -12,8 +12,8 @@
 <!-- <h3>Welcome to Webpack 4 starter </h3> -->
 <div class="window-wrapper">
 
-    <div class="modal modal-menu">
-        <header class = modal-menu__header>
+    <div class="modal modal--left modal-menu">
+        <header class = "modal__header modal-menu__header">
             <div class="container-center"> 
                 <div class="header__inner modal-menu__inner">                         
                     <div class="btn-group btn-group__logo">                
@@ -28,40 +28,42 @@
                 </div>   
             </div>             
         </header>
-
-        <nav class="nav-vertical">
-            <a href="" class="nav-vertical__item nav-vertical__item--active">Ремонт техники</a>
-            <a href="" class="nav-vertical__item">Услуги и сервисы</a>
-            <a href="" class="nav-vertical__item">Корпоративным клиентам</a>
-            <a href="" class="nav-vertical__item">Продавцам техники</a>
-            <a href="" class="nav-vertical__item">Партнерам</a>
-            <a href="" class="nav-vertical__item">Производителям</a>
-            <a href="" class="nav-vertical__item">Наши сервисные центры</a>
-            <a href="" class="nav-vertical__item">Контакты</a>
-        </nav> 
-
-        <footer class="block-1-4__footer">
+        <div class="modal__body">
+            <div class="container-center"> 
+                <nav class="nav-vertical">
+                    <a href="" class="nav-vertical__item ">Ремонт техники</a>
+                    <a href="" class="nav-vertical__item nav-vertical__item--active">Услуги и сервисы</a>
+                    <a href="" class="nav-vertical__item">Корпоративным клиентам</a>
+                    <a href="" class="nav-vertical__item">Продавцам техники</a>
+                    <a href="" class="nav-vertical__item">Партнерам</a>
+                    <a href="" class="nav-vertical__item">Производителям</a>
+                    <a href="" class="nav-vertical__item">Наши сервисные центры</a>
+                    <a href="" class="nav-vertical__item">Контакты</a>
+                </nav>
+            </div> 
+        </div>
+        <footer class="modal__footer">
             <div class="container-center">
                 <div class="btn-group"> 
                     <button class="btn btn--call"></button>                                        
                     <button class="btn btn--chat"></button>
                     <button class="btn btn--profile"></button>      
                 </div>                            
-                <a class="mail-link" href="mailto:mail@cps.com" >mail@cps.com</a>
-                <a class="tel-link" href="tel:8 800 890 8900" >8 800 890 8900</a>
+                <a class="modal__link mail-link" href="mailto:mail@cps.com" >mail@cps.com</a>
+                <a class="modal__link tel-link" href="tel:8 800 890 8900" >8 800 890 8900</a>
                 <div class="choose-language">
-                    <a href="" class="choose-language__item choose-language__item--active">RU</a>
-                    <a href="" class="choose-language__item">EN</a>
-                    <a href="" class="choose-language__item">CH</a>
+                    <a href="" class="modal__link choose-language__item--active choose-language__item">RU</a>
+                    <a href="" class="modal__link choose-language__item">EN</a>
+                    <a href="" class="modal__link choose-language__item">CH</a>
                 </div>
             </div>
         </footer>
     </div>
 
 
-    <div class="modal modal-right modal-call">
+    <div class="modal modal--right modal-call">
         <button class="btn btn--close"></button> 
-        <header class = "modal-right__header modal-right__header--hidden-lg">         
+        <header class = "modal__header modal__header--hidden-lg">         
                 <div class="header__inner"></div>                           
         </header>
         <div class="content-header">    
@@ -71,20 +73,20 @@
                 </div>        
             </div>
         </div>
-        <div class="modal-right__form-wrapper">
+        <div class="modal--right__form-wrapper">
             <div class="container-center">
-                <form class="modal-right__form" action="">                    
-                    <input class="modal-right__input" type="phone" placeholder="Телефон">   
+                <form class="modal--right__form" action="">                    
+                    <input class="modal--right__input" type="phone" placeholder="Телефон">   
                 </form>
-                <p class="modal-right__note">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+                <p class="modal--right__note">Нажимая “отправить”, вы даете согласие на <span class="highlighting"> обработку персональных данных</span> и соглашаетесь с нашей <span class="highlighting">политикой конфиденциальности</span></p>
                 <button class="btn btn--send-form"></button>
             </div> 
         </div>           
     </div>
 
-    <div class="modal modal-right modal-feedback">
+    <div class="modal modal--right modal-feedback">
         <button class="btn btn--close"></button> 
-        <header class = "modal-right__header modal-right__header--hidden-lg">         
+        <header class = "modal__header modal__header--hidden-lg">         
                 <div class="header__inner"></div>                           
         </header>
         <div class="content-header">    
@@ -94,15 +96,15 @@
                 </div>        
             </div>
         </div>
-        <div class="modal-right__form-wrapper">
+        <div class="modal--right__form-wrapper">
             <div class="container-center">
-                <form class="modal-right__form" action="">                    
-                    <input class="modal-right__input" type="text" placeholder="Имя">
-                    <input class="modal-right__input" type="phone" placeholder="Телефон">
-                    <input class="modal-right__input" type="email" placeholder="Электронная почта">   
-                    <textarea class="modal-right__input" rows="5" placeholder="Сообщение"></textarea>
+                <form class="modal--right__form" action="">                    
+                    <input class="modal--right__input" type="text" placeholder="Имя">
+                    <input class="modal--right__input" type="phone" placeholder="Телефон">
+                    <input class="modal--right__input" type="email" placeholder="Электронная почта">   
+                    <textarea class="modal--right__input" rows="5" placeholder="Сообщение"></textarea>
                 </form>
-                <p class="modal-right__note">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+                <p class="modal--right__note">Нажимая “отправить”, вы даете согласие на <span class="highlighting"> обработку персональных данных</span> и соглашаетесь с нашей <span class="highlighting">политикой конфиденциальности</span></p>
                 <button class="btn btn--send-form"></button>
             </div> 
         </div>              
@@ -255,15 +257,15 @@
                                 <button class="btn btn--go"></button>
                             </div>
                             <div class="slider__item slider__item--large swiper-slide">
-                                <h3 class="slider__item-title">Ремонт ноутбуков</h3>  
+                                <h3 class="slider__item-title">Ремонт планшетов </h3>  
                                 <button class="btn btn--go"></button>
                             </div>
                             <div class="slider__item slider__item--large swiper-slide">
-                                <h3 class="slider__item-title">Ремонт ноутбуков</h3>  
+                                <h3 class="slider__item-title">Ремонт ПК</h3>  
                                 <button class="btn btn--go"></button>
                             </div>
                             <div class="slider__item slider__item--large swiper-slide">
-                                <h3 class="slider__item-title">Ремонт ноутбуков</h3>  
+                                <h3 class="slider__item-title">Ремонт мониторов</h3>  
                                 <button class="btn btn--go"></button>
                             </div>                    
                         </div>

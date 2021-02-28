@@ -5,6 +5,7 @@ $gray-lightest: #DDDDDD;
 $white-darkest: #F8F8F8;
 $white-dark: #F2F2F2;
 $white: #FFFFFF;
+$pink: #FF3E79;
 
 $bgcolor-body: $white-dark;
 $bgcolor-page: $white-darkest;
@@ -21,11 +22,22 @@ $font-family--medium: 'TT Lakes Medium';
 
 // $line-height: 0.2px;
 
+$indent: 16px;
+$indent--medium: 24px;
+$indent--large: 32px;
+
+
 $screen-xs: 0px;
 $screen-sm: 320px;
 $screen-md: 768px;
-$screen-lg: 1160px;
+$screen-lg: 1120px;
 $screen-xl: 1426px;
+
+$indent: 16px;
+
+// @media (min-width: $screen-md) {        
+//   $indent: 24px;
+//   } 
 
 @import '../../node_modules/swiper/swiper-bundle.css';
 
@@ -69,26 +81,32 @@ body {
   // line-height: $line-height;
 }
 
+
 .window-wrapper {
   display: flex;
   margin: 0 auto;
+  position: relative;
   max-width: $screen-xl;
-  
+  // height: 100vh;
 }
 
 .page {
-  display: flex;
+  display: flex;  
 	flex-direction: column;
 	min-height: 100%;
   min-width: 320px;
   width: 1120px;
   background: $bgcolor-page;    
   margin: 0 auto;
-  min-height: 100vh;
+  // min-height: 100vh;
 
   @media (min-width: $screen-xl) {        
   //  max-width: 1120px;
   } 
+
+  &--blur {
+    filter: blur(10px);
+  }
 
 }
 
