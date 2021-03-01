@@ -10,12 +10,12 @@
 <body>
 <!-- <img src="./img/webpack.svg" alt="Webpack Logo" width="200px"> -->
 <!-- <h3>Welcome to Webpack 4 starter </h3> -->
-<div class="window-wrapper">
+<div class="wrapper">
 
     <div class="modal modal--left modal-menu">
-        <header class = "modal__header modal-menu__header">
+        <header class = "modal__header modal-menu__header page-header">
             <div class="container-center"> 
-                <div class="header__inner modal-menu__inner">                         
+                <div class="page-header__inner modal-menu__inner">                         
                     <div class="btn-group btn-group__logo">                
                         <button class="btn btn--close btn--hidden-lg"></button>
                         <div class="logo">
@@ -49,12 +49,12 @@
                     <button class="btn btn--chat"></button>
                     <button class="btn btn--profile"></button>      
                 </div>                            
-                <a class="modal__link mail-link" href="mailto:mail@cps.com" >mail@cps.com</a>
-                <a class="modal__link tel-link" href="tel:8 800 890 8900" >8 800 890 8900</a>
+                <a class="link link--mail" href="mailto:mail@cps.com" >mail@cps.com</a>
+                <a class="link link--tel" href="tel:8 800 890 8900" >8 800 890 8900</a>
                 <div class="choose-language">
-                    <a href="" class="modal__link choose-language__item--active choose-language__item">RU</a>
-                    <a href="" class="modal__link choose-language__item">EN</a>
-                    <a href="" class="modal__link choose-language__item">CH</a>
+                    <a href="" class="link link--active choose-language__item">RU</a>
+                    <a href="" class="link choose-language__item">EN</a>
+                    <a href="" class="link choose-language__item">CH</a>
                 </div>
             </div>
         </footer>
@@ -63,8 +63,8 @@
 
     <div class="modal modal--right modal-call">
         <button class="btn btn--close"></button> 
-        <header class = "modal__header modal__header--hidden-lg">         
-                <div class="header__inner"></div>                           
+        <header class = "modal__header page-header page-header--hidden-lg">         
+                <div class="page-header__inner"></div>                           
         </header>
         <div class="content-header">    
             <div class="container-center">
@@ -76,7 +76,7 @@
         <div class="modal--right__form-wrapper">
             <div class="container-center">
                 <form class="modal--right__form" action="">                    
-                    <input class="modal--right__input" type="phone" placeholder="Телефон">   
+                    <input class="input" type="phone" placeholder="Телефон">   
                 </form>
                 <p class="note">Нажимая “отправить”, вы даете согласие на <em class="note__highlighting"> обработку персональных данных</em> и соглашаетесь с нашей <em class="note__highlighting">политикой конфиденциальности</em></p>
                 <button class="btn btn--send-form"></button>
@@ -86,8 +86,8 @@
 
     <div class="modal modal--right modal-feedback">
         <button class="btn btn--close"></button> 
-        <header class = "modal__header modal__header--hidden-lg">         
-                <div class="header__inner"></div>                           
+        <header class = "modal__header page-header page-header--hidden-lg">         
+                <div class="page-header__inner"></div>                           
         </header>
         <div class="content-header">    
             <div class="container-center">
@@ -99,10 +99,10 @@
         <div class="modal--right__form-wrapper">
             <div class="container-center">
                 <form class="modal--right__form" action="">                    
-                    <input class="modal--right__input" type="text" placeholder="Имя">
-                    <input class="modal--right__input" type="phone" placeholder="Телефон">
-                    <input class="modal--right__input" type="email" placeholder="Электронная почта">   
-                    <textarea class="modal--right__input" rows="5" placeholder="Сообщение"></textarea>
+                    <input class="input" type="text" placeholder="Имя">
+                    <input class="input" type="phone" placeholder="Телефон">
+                    <input class="input" type="email" placeholder="Электронная почта">   
+                    <textarea class="input" rows="5" placeholder="Сообщение"></textarea>
                 </form>
                 <p class="note">Нажимая “отправить”, вы даете согласие на <span class="note__highlighting"> обработку персональных данных</span> и соглашаетесь с нашей <span class="note__highlighting">политикой конфиденциальности</span></p>
                 <button class="btn btn--send-form"></button>
@@ -140,7 +140,7 @@
             </div>         
         </header>
 
-        <main class="page-main">
+        <main class="page__main">
             <div class="content-header">    
                 <div class="container-center">
                     <div class="content-header__inner">
@@ -169,8 +169,8 @@
             <article class="article">   
                         <div class="article__content article__content--mod-sm-md article__content--mod-lg">                     
                             <p class="article__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p> 
-                            <p class="article__text article__text--hidden-xs">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера <span class="article__text article__text--hidden-xs-sm-md">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                            <p class="article__text article__text--hidden-xs-sm-md-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio dolorem neque magnam deleniti laboriosam eius quas odio fuga modi sit voluptas quam, culpa doloremque! Ipsa impedit quam reiciendis obcaecati numquam mollitia molestias alias, non esse quos qui magnam sunt dolore nostrum dolor sapiente enim nesciunt illo odit officiis id?</p>
+                            <p class="article__text article__text--hidden-xs article__text--hidden">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера <span class="article__text article__text--hidden-xs-sm-md article__text--hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+                            <p class="article__text article__text--hidden-xs-sm-md-lg article__text--hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed optio dolorem neque magnam deleniti laboriosam eius quas odio fuga modi sit voluptas quam, culpa doloremque! Ipsa impedit quam reiciendis obcaecati numquam mollitia molestias alias, non esse quos qui magnam sunt dolore nostrum dolor sapiente enim nesciunt illo odit officiis id?</p>
                             <btn class="btn btn--show-more article__read-more-btn" href="#" >Читать далее</btn>
                         </div>                           
                         <div class="article__picture-container">

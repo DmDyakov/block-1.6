@@ -1,0 +1,19 @@
+.page {
+  display: flex;  
+	flex-direction: column;
+	min-height: 100%;
+  min-width: 320px;
+  width: 1120px;
+  background: $bgcolor-page;    
+  margin: 0 auto;
+  // min-height: 100vh;
+
+  @media (min-width: $screen-xl) {        
+  //  max-width: 1120px;
+  } 
+
+  &--blur {
+    filter: blur(10px);
+  }
+ 
+}

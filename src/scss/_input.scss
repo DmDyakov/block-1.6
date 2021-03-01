@@ -1,0 +1,12 @@
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  &::-webkit-input-placeholder { color: $gray-light; font: $font-size--large $font-family--medium;}
+  &::-moz-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+  &:-ms-input-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+  &:-moz-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
+}

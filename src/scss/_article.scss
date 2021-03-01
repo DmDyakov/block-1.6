@@ -29,8 +29,8 @@
     letter-spacing: 0.2px;
     margin-bottom: 24px;
 
-    &--hidden-xs {
-      display: none;      
+      &--hidden-xs {
+      display: none;            
 
       @media (min-width: $screen-md) { 
         display: inline;  
@@ -47,7 +47,6 @@
     &--hidden-xs-sm-md-lg {
       display: none; 
     }
-
   }
 
   &__read-more-btn {
@@ -59,7 +58,7 @@
      
     @media (min-width: $screen-md) { 
       margin-right: $indent--medium;
-        flex: 1;
+      flex: 1;
     } 
 
     @media (min-width: $screen-lg) { 
@@ -81,6 +80,11 @@
       height: 350px;
     }
   }
+
+  .show-hidden-text {
+    display: inline;
+  }
+
 }
 
 

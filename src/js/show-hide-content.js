@@ -1,13 +1,38 @@
 const readMoreBtn = document.querySelector('.article__read-more-btn');
+const hiddenArticleTexts = document.querySelectorAll('.article__text--hidden')
+
+for (let hiddenArticleText of hiddenArticleTexts) {
+    readMoreBtn.addEventListener('click', () => {     
+    showHideTextFunc(hiddenArticleText);
+    });
+    window.addEventListener('resize', () => {
+    hideText(hiddenArticleText);         
+    });
+}
+
+let showText = (hiddenText) => {
+  readMoreBtn.textContent = 'Скрыть текст';  
+  hiddenText.classList.add('show-hidden-text');          
+} 
+
+let hideText = (hiddenText) => {  
+  readMoreBtn.textContent = 'Читать далее';
+  hiddenText.classList.remove('show-hidden-text');  
+}  
+
+
+let showHideTextFunc = (hiddenText) => {
+  if (readMoreBtn.textContent == 'Читать далее') {
+    showText(hiddenText);
+  } else {
+    hideText(hiddenText);  
+  }       
+}
+
+//=========================================================
+
 const changeSizeBtns = document.querySelectorAll('.change-size-btn');
 const sliderWrappers = document.querySelectorAll('.slider__wrapper');
-const hiddenArticleXsText = document.querySelector('.article__text--hidden-xs')
-const hiddenArticleXsSmMdText = document.querySelector('.article__text--hidden-xs-sm-md')
-const hiddenArticleXsSmMdLgText = document.querySelector('.article__text--hidden-xs-sm-md-lg')
-
-readMoreBtn.addEventListener('click', () => {  
-  showHideTextFunc();
-});
 
 for (let i = 0; i < changeSizeBtns.length; i++) {
   changeSizeBtns[i].addEventListener('click', () => {      
@@ -16,35 +41,11 @@ for (let i = 0; i < changeSizeBtns.length; i++) {
 }
 
 for (let i = 0; i < changeSizeBtns.length; i++) {
-  window.addEventListener('resize', () => {
-  hideText();
+  window.addEventListener('resize', () => { 
   hideList(i)   
   });
 }
 
-
-let showText = () => {
-    readMoreBtn.textContent = 'Скрыть текст';  
-    hiddenArticleXsText.classList.add('show-hidden-text');
-    hiddenArticleXsSmMdText.classList.add('show-hidden-text');
-    hiddenArticleXsSmMdLgText.classList.add('show-hidden-text');
-    console.log("show")
-} 
-
-let hideText = () => {  
-  readMoreBtn.textContent = 'Читать далее';
-  hiddenArticleXsText.classList.remove('show-hidden-text');
-  hiddenArticleXsSmMdText.classList.remove('show-hidden-text');
-  hiddenArticleXsSmMdLgText.classList.remove('show-hidden-text');
-}  
-
-let showHideTextFunc = () => {
-  if (readMoreBtn.textContent == 'Читать далее') {
-    showText();
-  } else {
-    hideText();  
-  }       
-}
 
 let showList = (i) => {  
   changeSizeBtns[i].textContent = 'Скрыть';

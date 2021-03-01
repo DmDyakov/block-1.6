@@ -33,7 +33,7 @@ $screen-md: 768px;
 $screen-lg: 1120px;
 $screen-xl: 1426px;
 
-$indent: 16px;
+
 
 // @media (min-width: $screen-md) {        
 //   $indent: 24px;
@@ -43,6 +43,9 @@ $indent: 16px;
 
 @import 'reset';
 @import 'fonts';
+@import 'container';
+
+@import 'page';
 
 @import 'btn';
 @import 'btn-group';
@@ -54,104 +57,42 @@ $indent: 16px;
 
 @import 'slider';
 
+@import 'link';
+@import 'choose-language';
+@import 'input';
+@import 'nav-vertical';
 @import 'note';
 @import 'page-footer';
 @import 'modal';
 
-
-
-// $text: #fff;
-
-// @font-face {
-//   font-family: 'Comic';
-//   src: url('../fonts/comic.ttf') format('truetype');
-//   font-weight: normal;
-//   font-style: italic;
-// }
-
-// body {
-//   padding: 1rem;
-//   margin: 0;
-//   font-family: Comic, sans-serif;
-//   background-color: $bgColor;
-//   color: $text;
-// }
 body {
   background-color: $bgcolor-body;
-  font: $font-size $font-family;  
-  // line-height: $line-height;
+  font: $font-size $font-family;    
 }
 
 
-.window-wrapper {
+.wrapper {
   display: flex;
   margin: 0 auto;
   position: relative;
-  max-width: $screen-xl;
-  // height: 100vh;
+  max-width: $screen-xl;  
 }
 
-.page {
-  display: flex;  
-	flex-direction: column;
-	min-height: 100%;
-  min-width: 320px;
-  width: 1120px;
-  background: $bgcolor-page;    
-  margin: 0 auto;
-  // min-height: 100vh;
+// .page-main {
+//   flex: 1 0 auto; 
+// }
 
-  @media (min-width: $screen-xl) {        
-  //  max-width: 1120px;
-  } 
-
-  &--blur {
-    filter: blur(10px);
-  }
-
-}
-
-.page-main {
-  flex: 1 0 auto;
- 
-}
-
-:root {
-  --base-size: 16px;
-  @media (min-width: $screen-md) {        
-    --base-size: 24px;
-  } 
-  @media (min-width: 1120px) {        
-    --base-size: 32px;
-  } 
-
-}
-
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 88px;   
+// .header__inner {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   min-height: 88px;   
   
-  }
+//   }
 
 
-.container-center {
-  padding: 0 var(--base-size);  
-  max-width: calc(1120px-2*var(--base-size));  
-}
 
-.container-right {
-  padding-left: var(--base-size);  
-  min-width: 288px;    
-  max-width: calc(1120px-1*var(--base-size)); 
-}
-
-.show-hidden-text {
-  display: inline;
-}
-
-.show-modal {
-  display: block;  
-  z-index: 10;
-}
+// .show-modal {
+//   display: block;  
+//   z-index: 10;
+// }
