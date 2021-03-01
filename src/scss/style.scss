@@ -27,7 +27,7 @@ $indent--medium: 24px;
 $indent--large: 32px;
 
 
-$screen-xs: 0px;
+$screen-xs: 320px;
 $screen-sm: 320px;
 $screen-md: 768px;
 $screen-lg: 1120px;
@@ -46,7 +46,7 @@ $indent: 16px;
 
 @import 'btn';
 @import 'btn-group';
-// @import 'btn-show-more';
+
 @import 'page-header';
 @import 'content-header';
 @import 'nav';
@@ -54,10 +54,11 @@ $indent: 16px;
 
 @import 'slider';
 
+@import 'note';
 @import 'page-footer';
 @import 'modal';
-@import 'modal-menu';
-@import 'modal-right';
+
+
 
 // $text: #fff;
 

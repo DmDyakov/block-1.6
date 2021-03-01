@@ -1,0 +1,9 @@
+.note {
+  font-family: $font-family--medium;
+  color: $text-color--light;
+  
+
+  &__highlighting {
+    color: $pink;
+  }
+}

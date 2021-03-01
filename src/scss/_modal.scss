@@ -203,14 +203,8 @@
       &:-moz-placeholder { color:$gray-light; font: $font-size--large $font-family--medium;}
     }
   
-    &__note {
-      font-family: $font-family--medium;
-      color: $text-color--light;
+    & .note {
       margin-bottom: 18px;
-
-      & .highlighting {
-        color: $pink;
-      }
     }
       
   }

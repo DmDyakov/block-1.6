@@ -1,45 +1,63 @@
 .nav {
     display: flex;
     align-items: center;
-    margin: 24px 0 0 var(--base-size);
+    margin: 24px 0 0 $indent;
     overflow: auto; 
-    scrollbar-width: none;    
+    scrollbar-width: none;  
+
+    @media (min-width: $screen-md) {        
+      margin: 24px 0 0 $indent--medium;  
+    } 
+
+    @media (min-width: $screen-md) {        
+      margin: 24px 0 0 $indent--large; 
+      flex-flow: wrap;  
+    }   
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &__item {
+        padding: 8px 16.5px;
+        // margin: 1px;
+        margin-bottom: 12px;             
+        white-space: nowrap;
+        text-decoration: none;
+        font: 16px 'TT Lakes Medium';
+        color: #7E7E82;
+        border-radius: 6px;
+        letter-spacing: -0.2px;
+        transition: color 0.3s; 
+
+        &:focus,
+        &:hover {
+            color: #b3b3b3;
+            transition: 0.3s;            
+        }
+
+        &--active {
+            border: 2px solid #B8FFEC;    
+            background: #FFFFFF;
+
+            &:hover,
+            &:focus {
+                border: 2px solid #B8FFEC;    
+                background: #FFFFFF;
+                color: #7E7E82;
+            }
+            
+        }
+
+    } 
+
 }
 
-.nav::-webkit-scrollbar {
-    width: 0;
-  }
 
-.nav__item {
-    padding: 8px 16.5px;
-    // margin: 1px;
-    margin-bottom: 12px;             
-    white-space: nowrap;
-    text-decoration: none;
-    font: 16px 'TT Lakes Medium';
-    color: #7E7E82;
-    border-radius: 6px;
-    letter-spacing: -0.2px;
-    transition: color 0.3s; 
 
-} 
 
-.nav__item:focus,
-.nav__item:hover {
-    color: #b3b3b3;
-    transition: 0.3s;
-       
-}
 
-.nav__item--active {
-    border: 2px solid #B8FFEC;    
-    background: #FFFFFF;
-    
-}
 
-.nav__item--active:hover,
-.nav__item--active:focus {
-    border: 2px solid #B8FFEC;    
-    background: #FFFFFF;
-    color: #7E7E82;
-}
+
+
+

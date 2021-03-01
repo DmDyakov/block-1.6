@@ -1,26 +1,32 @@
 .content-header {
   padding-top: 32px;
   margin-bottom: 24px;
-  position: relative;     
-}
-
-.content-header__inner {
+  position: relative; 
+  
+  &__inner {
   display: flex;
   /* justify-content: space-between; */
   height: 40px;     
-}
+  }
 
-.content-header__title {
+  &__title {
   font-family: 'TT Lakes Bold';
   letter-spacing: -0.6px; 
   flex-grow: 1;
+  }
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 40px;    
+    position: absolute;      
+    background: url("../img/highlight.svg") no-repeat;
+    
+  }
+
 }
 
-.content-header::before {
-  content: "";
-  width: 4px;
-  height: 40px;    
-  position: absolute;      
-  background: url("../img/highlight.svg") no-repeat;
-  
-}
+
+
+
+
