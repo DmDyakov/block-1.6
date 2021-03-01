@@ -34,11 +34,6 @@ $screen-lg: 1120px;
 $screen-xl: 1426px;
 
 
-
-// @media (min-width: $screen-md) {        
-//   $indent: 24px;
-//   } 
-
 @import '../../node_modules/swiper/swiper-bundle.css';
 
 @import 'reset';
@@ -70,7 +65,6 @@ body {
   font: $font-size $font-family;    
 }
 
-
 .wrapper {
   display: flex;
   margin: 0 auto;
@@ -78,21 +72,3 @@ body {
   max-width: $screen-xl;  
 }
 
-// .page-main {
-//   flex: 1 0 auto; 
-// }
-
-// .header__inner {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   min-height: 88px;   
-  
-//   }
-
-
-
-// .show-modal {
-//   display: block;  
-//   z-index: 10;
-// }

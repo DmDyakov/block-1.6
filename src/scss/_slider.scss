@@ -29,9 +29,8 @@
   }
 
   &__container {
-    background: #F8F8F8;   
-  //  overflow: hidden;
-    
+    background: #F8F8F8; 
+ 
   }
 
   &__wrapper {
@@ -52,10 +51,7 @@
         max-height: 100%;  
         margin-bottom: 0;
       }
-    }
-
-    
- 
+    }   
   }
 
   &__item {
@@ -63,9 +59,8 @@
     justify-content: space-between;
     width: 240px;
     height: 72px;
-    min-width:0;  
-    // align-items: center;       
-    background-color: #FFFFFF;  
+    min-width:0;           
+    background-color: $white;  
     padding: 16px; 
     margin-right: 16px; 
 
@@ -115,23 +110,14 @@
 
     &--hidden-sm {
       display: none;
+
       @media (min-width: 768px) {
         width: auto; 
         display: flex; 
         margin-bottom: 0;
         background-color: inherit;      
       } 
-    }
-
-  //   .slider__subitem-title {
-  //     display: block;
-  //     margin-bottom: 0;
-  //   }
-
-  //   & .price-list__btn {
-  //     visibility: hidden;      
-  //   }
-    
+    }     
   }
 
   &__subitem {
@@ -146,10 +132,9 @@
 
     &:not(:last-of-type) {
       flex: 100%;
-      @media (min-width: 768px) { 
-        flex: auto;
-        
 
+      @media (min-width: 768px) { 
+        flex: auto;      
       }
     }  
 
@@ -182,11 +167,8 @@
   &__pagination {
     position: static;    
 
-    @media (min-width: 768px) {
-           
-        display: none;
-    
-      
+    @media (min-width: 768px) {           
+        display: none;     
     }
 
     .swiper-pagination-bullet {
@@ -199,9 +181,7 @@
     .swiper-pagination-bullet-active {
       background: #B5B6BC;  
     }
-  }
-
- 
+  } 
 
   .btn--order {
     flex: 1 119px;
@@ -228,15 +208,6 @@
     visibility: hidden;
   }
 }  
-
-
-
-
-
-// .hidden {
-//   display: none;
-// }
-
 
 .show {
   max-height: 100%;         

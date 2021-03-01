@@ -1,6 +1,6 @@
 .container-center {
   padding: 0 $indent;  
-  max-width: calc(1120px-2*$indent);  
+  max-width: calc($screen-lg - 2 * $indent);  
   
   @media (min-width: $screen-md) {        
     padding: 0 $indent--medium;

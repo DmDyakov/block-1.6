@@ -42,10 +42,8 @@ for (let chatBtn of chatBtns) {
 for (let i = 0; i < modals.length; i++) {
   closeBtns[i].addEventListener('click', () => {
     hideModal(modals[i]);
-    removeblurPage();
-    
-  });
-  
+    removeblurPage();    
+  });  
 }
 
 
@@ -56,9 +54,7 @@ page.addEventListener('click', (evt) => {
     hideModal(modalMenu);
     hideModal(modalCall)
     hideModal(modalFeedback)
-  }
-  
-  
+  }  
 });
 
 

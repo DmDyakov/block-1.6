@@ -1,4 +1,5 @@
 .page-header {
+  background: $white; 
   
   &--hidden-lg {
     @media (min-width: $screen-lg) {        
@@ -7,7 +8,7 @@
   }  
 
   &__inner {
-  background: #FFFFFF;     
+  background: $white;     
   display: flex;
   justify-content: space-between;
   align-items: center;
