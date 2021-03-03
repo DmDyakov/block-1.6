@@ -1,3 +1,7 @@
+# Ссылка на github page:
+## https://dmdyakov.github.io/section-web-core__block-1.6/
+
+============================================================
 # Webpack Static Site Starter Kit
 
 ## Features
