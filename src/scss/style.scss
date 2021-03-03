@@ -7,20 +7,24 @@ $white-dark: #F2F2F2;
 $white: #FFFFFF;
 $pink: #FF3E79;
 
+
+
 $bgcolor-body: $white-dark;
 $bgcolor-page: $white-darkest;
 
 $text-color: $black-light;
 $text-color--light: $gray;
+$input-border: #EAEAEA;
 
 $font-size: 14px;
 $font-size--large: 16px;
+$font-size--largest: 24px;
 
 $font-family: 'TT Lakes Regular';
 $font-family--bold: 'TT Lakes Bold';
 $font-family--medium: 'TT Lakes Medium';
 
-// $line-height: 0.2px;
+
 
 $indent: 16px;
 $indent--medium: 24px;
@@ -70,5 +74,11 @@ body {
   margin: 0 auto;
   position: relative;
   max-width: $screen-xl;  
+}
+
+.blur {
+  filter: blur(10px);    
+  height:100vh;
+  overflow: hidden;  
 }
 

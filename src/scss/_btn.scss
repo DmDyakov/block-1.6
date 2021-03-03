@@ -18,9 +18,11 @@
   &:active   {
     opacity: 0.7;
     transition: opacity 0.3s;  
-    outline: 1px solid $gray-lightest;
-    ;
+    outline: 0;      
+    
   }
+
+  
 
   &:not(:last-of-type) {
     margin-right: 16px;   

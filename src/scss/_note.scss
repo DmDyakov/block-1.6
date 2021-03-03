@@ -4,6 +4,15 @@
   
 
   &__highlighting {
+    font-family: $font-family--medium;
     color: $pink;
+
+    &:hover,
+    &:focus {
+      color: $pink;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+
+    }
   }
 }

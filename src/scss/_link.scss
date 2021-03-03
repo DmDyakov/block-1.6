@@ -6,30 +6,49 @@
   transition: color 0.3s;
 
   &:hover, 
-  &:focus {
+  &:focus  {
     color: #7E7E82;            
     transition: color 0.3s;
   }
+
+
+
+  & img {
+      transition: opacity 0.3s; 
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s; 
+    }
+  }
+  
+    
+
 
   &--active {
     color: $gray;
   }
 
   &--mail {
-    font-size: 16px;
-    font-family: 'TT Lakes Medium';
+    font-size: $font-size--large;
+    font-family: $font-family--medium;
     margin-bottom: 12px; 
   }
 
   &--tel {
-    font-size: 24px;
-    font-family: 'TT Lakes Bold';
+    font-size: $font-size--largest;
+    font-family: $font-family--bold;
     margin-bottom: 8px;
+  
+  
 
     @media (min-width: $screen-md) {
       margin-bottom: 40px;
     }   
 
+  }
+
+  &--disabled {
+    pointer-events: none;
   }
 
 }
